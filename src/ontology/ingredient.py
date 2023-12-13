@@ -23,7 +23,7 @@ with onto:
         pass
 
 
-    class LiquidIngredient(Thing):
+    class LiquidIngredient(Ingredient):
         pass
 
 
