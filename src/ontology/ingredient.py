@@ -12,15 +12,15 @@ with onto:
 
 
     class Flour(DryPowderIngredient):
-        pass
+        label = [locstr("flour", "en")]
 
 
     class Salt(DryPowderIngredient):
-        pass
+        label = [locstr("salt", "en")]
 
 
     class Sugar(DryPowderIngredient):
-        pass
+        label = [locstr("sugar", "en")]
 
 
     class LiquidIngredient(Ingredient):
@@ -28,11 +28,11 @@ with onto:
 
 
     class Milk(LiquidIngredient):
-        pass
+        label = [locstr("milk", "en")]
 
 
     class Water(LiquidIngredient):
-        pass
+        label = [locstr("water", "en")]
 
 
     class SolidIngredient(Ingredient):
@@ -44,16 +44,16 @@ with onto:
 
 
     class Butter(WetIngredient):
-        pass
+        label = [locstr("butter", "en")]
 
 
     class Egg(WetIngredient):
-        pass
+        label = [locstr("egg", "en")]
 
 
     class EggWhite(Egg):
-        pass
+        label = [locstr("egg white", "en")]
 
 
     class EggYolk(Egg):
-        pass
+        label = [locstr("egg yolk", "en")]

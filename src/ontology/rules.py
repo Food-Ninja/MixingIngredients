@@ -63,7 +63,7 @@ with onto:
 
     r8 = create_rule(name="StirWet",
                      rule="StirringTask(?x) ^ WetIngredient(?ing)"
-                          "^Motion(?motion) -> WhirlstormMotion(?motion) ^ CircularDivingToInner(?motion) "
+                          "^Motion(?motion) -> WhirlstormMotion(?motion) ^ CircularDivingToInnerMotion(?motion) "
                           "^ performMotion(?x, ?motion)")
 
     r9 = create_rule(name="StirLiquid",
@@ -100,13 +100,13 @@ with onto:
     """
 
     r15 = create_rule(name="WhiskWet",
-                      rule="WhiskTask(?x) ^ WetIngredient(?ing) ^Motion(?motion) -> "
+                      rule="WhiskingTask(?x) ^ WetIngredient(?ing) ^Motion(?motion) -> "
                            "VerticalCircularMotion(?motion) ^ performMotion(?x, ?motion)")
 
     r16 = create_rule(name="WhiskPowderWet",
-                      rule="WhiskTask(?x) ^ DryPowderIngredient(?ing1) ^ WetIngredient(?ing2) ^Motion(?motion) -> "
+                      rule="WhiskingTask(?x) ^ DryPowderIngredient(?ing1) ^ WetIngredient(?ing2) ^Motion(?motion) -> "
                            "WhirlstormMotion(?motion) ^ performMotion(?x, ?motion)")
 
     r17 = create_rule(name="WhiskPowder",
-                      rule="WhiskTask(?x) ^ DryPowderIngredient(?ing) ^Motion(?motion) -> "
+                      rule="WhiskingTask(?x) ^ DryPowderIngredient(?ing) ^Motion(?motion) -> "
                            "WhirlstormMotion(?motion) ^ performMotion(?x, ?motion)")
