@@ -26,7 +26,7 @@ with onto:
 
 
     class Whisk(KitchenTool):
-        pass
+        label = [locstr("whisk", "en")]
 
 
     class TableWare(DesignedTool):
@@ -39,6 +39,7 @@ with onto:
 
     class Bowl(Crockery):
         namespace = soma_namespace
+        label = [locstr("bowl", "en")]
 
 
     class PastaBowl(Bowl):
