@@ -39,7 +39,7 @@ with onto:
         pass
 
 
-    class WetIngredient(Thing):
+    class WetIngredient(Ingredient):
         pass
 
 
