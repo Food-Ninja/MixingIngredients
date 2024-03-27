@@ -1,10 +1,12 @@
 from owlready2 import *
 
 onto = get_ontology("http://www.ease-crc.org/ont/mixing")
+dul = get_ontology("http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#")
 
 with onto:
     class Task(Thing):
         label = [locstr("task", "en")]
+        namespace = dul
 
 
     class BeatingTask(Task):
@@ -25,3 +27,4 @@ with onto:
 
     class WhiskingTask(Task):
         label = [locstr("whisking task", "en")]
+
