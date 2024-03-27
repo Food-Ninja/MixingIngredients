@@ -350,16 +350,30 @@
 <owl:Class rdf:about="#WhirlstormThenCircularDivingToInner">
   <rdfs:subClassOf rdf:resource="#CompoundMotion"/>
   <owl:equivalentClass>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasMotion"/>
-      <owl:someValuesFrom>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Motion"/>
         <owl:Restriction>
-          <owl:onProperty rdf:resource="#followedBy"/>
-          <owl:onClass rdf:resource="#Motion"/>
-          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+          <owl:onProperty rdf:resource="#hasMotion"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#WhirlstormMotion"/>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#followedBy"/>
+                  <owl:someValuesFrom rdf:resource="#CircularDivingToInnerMotion"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#followedBy"/>
+                  <owl:onClass rdf:resource="#Motion"/>
+                  <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+          </owl:someValuesFrom>
         </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
   </owl:equivalentClass>
   <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">whirlstorm then circular to diving inner</rdfs:label>
 </owl:Class>
@@ -367,16 +381,30 @@
 <owl:Class rdf:about="#WhirlstormThenVertical">
   <rdfs:subClassOf rdf:resource="#CompoundMotion"/>
   <owl:equivalentClass>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasMotion"/>
-      <owl:someValuesFrom>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Motion"/>
         <owl:Restriction>
-          <owl:onProperty rdf:resource="#followedBy"/>
-          <owl:onClass rdf:resource="#Motion"/>
-          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+          <owl:onProperty rdf:resource="#hasMotion"/>
+          <owl:someValuesFrom>
+            <owl:Class>
+              <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#WhirlstormMotion"/>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#followedBy"/>
+                  <owl:someValuesFrom rdf:resource="#VerticalCircularMotion"/>
+                </owl:Restriction>
+                <owl:Restriction>
+                  <owl:onProperty rdf:resource="#followedBy"/>
+                  <owl:onClass rdf:resource="#Motion"/>
+                  <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                </owl:Restriction>
+              </owl:intersectionOf>
+            </owl:Class>
+          </owl:someValuesFrom>
         </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
   </owl:equivalentClass>
   <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">whirlstorm then vertical</rdfs:label>
 </owl:Class>

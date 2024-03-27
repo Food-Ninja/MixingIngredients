@@ -89,11 +89,11 @@ with onto:
 
     class WhirlstormThenCircularDivingToInner(CompoundMotion):
         label = [locstr("whirlstorm then circular to diving inner")]
-        equivalent_to = [Motion and (hasMotion.some(WhirlstormMotion and followedBy.some(CircularDivingToInnerMotion)
-                                                    and followedBy.exactly(1, Motion)))]
+        equivalent_to = [Motion & (hasMotion.some(WhirlstormMotion & followedBy.some(CircularDivingToInnerMotion)
+                                                  & followedBy.exactly(1, Motion)))]
 
 
     class WhirlstormThenVertical(CompoundMotion):
         label = [locstr("whirlstorm then vertical")]
-        equivalent_to = [Motion and (hasMotion.some(WhirlstormMotion and followedBy.some(VerticalCircularMotion) and
-                                                    followedBy.exactly(1, Motion)))]
+        equivalent_to = [Motion & (hasMotion.some(WhirlstormMotion & followedBy.some(VerticalCircularMotion) &
+                                                  followedBy.exactly(1, Motion)))]
