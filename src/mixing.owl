@@ -657,7 +657,7 @@
           <rdf:first>
             <swrl:ClassAtom>
               <swrl:classPredicate rdf:resource="#WetIngredient"/>
-              <swrl:argument1 rdf:resource="urn:swrl#ing"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
           <rdf:rest>
@@ -792,7 +792,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#LiquidIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -809,41 +809,20 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
-                      <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
+                      <swrl:classPredicate rdf:resource="#Motion"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#motion"/>
                     </swrl:ClassAtom>
                   </rdf:first>
                   <rdf:rest>
                     <rdf:Description>
                       <rdf:first>
                         <swrl:IndividualPropertyAtom>
-                          <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                          <swrl:propertyPredicate rdf:resource="#performMotion"/>
                           <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                          <swrl:argument2 rdf:resource="urn:swrl#ing2"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#motion"/>
                         </swrl:IndividualPropertyAtom>
                       </rdf:first>
-                      <rdf:rest>
-                        <rdf:Description>
-                          <rdf:first>
-                            <swrl:ClassAtom>
-                              <swrl:classPredicate rdf:resource="#Motion"/>
-                              <swrl:argument1 rdf:resource="urn:swrl#motion"/>
-                            </swrl:ClassAtom>
-                          </rdf:first>
-                          <rdf:rest>
-                            <rdf:Description>
-                              <rdf:first>
-                                <swrl:IndividualPropertyAtom>
-                                  <swrl:propertyPredicate rdf:resource="#performMotion"/>
-                                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                  <swrl:argument2 rdf:resource="urn:swrl#motion"/>
-                                </swrl:IndividualPropertyAtom>
-                              </rdf:first>
-                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                          </rdf:rest>
-                        </rdf:Description>
-                      </rdf:rest>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
                   </rdf:rest>
                 </rdf:Description>
@@ -933,6 +912,74 @@
                           </rdf:rest>
                         </rdf:Description>
                       </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhirlstormMotion"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#StirPowder">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#StirringTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#Motion"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
                   </rdf:rest>
                 </rdf:Description>
@@ -1060,7 +1107,7 @@
           <rdf:first>
             <swrl:ClassAtom>
               <swrl:classPredicate rdf:resource="#WetIngredient"/>
-              <swrl:argument1 rdf:resource="urn:swrl#ing"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
           <rdf:rest>
@@ -1104,7 +1151,7 @@
     <rdf:Description>
       <rdf:first>
         <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#WhirlstormThenCircularDivingToInner"/>
+          <swrl:classPredicate rdf:resource="#WhirlstormThenVertical"/>
           <swrl:argument1 rdf:resource="urn:swrl#motion"/>
         </swrl:ClassAtom>
       </rdf:first>
@@ -1128,7 +1175,7 @@
           <rdf:first>
             <swrl:ClassAtom>
               <swrl:classPredicate rdf:resource="#LiquidIngredient"/>
-              <swrl:argument1 rdf:resource="urn:swrl#ing"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
           <rdf:rest>
@@ -1202,38 +1249,49 @@
           <rdf:rest>
             <rdf:Description>
               <rdf:first>
-                <swrl:ClassAtom>
-                  <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
-                  <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
-                </swrl:ClassAtom>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
               </rdf:first>
               <rdf:rest>
                 <rdf:Description>
                   <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
-                      <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                      <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
-                    </swrl:IndividualPropertyAtom>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
+                    </swrl:ClassAtom>
                   </rdf:first>
                   <rdf:rest>
                     <rdf:Description>
                       <rdf:first>
-                        <swrl:ClassAtom>
-                          <swrl:classPredicate rdf:resource="#Motion"/>
-                          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
-                        </swrl:ClassAtom>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                        </swrl:IndividualPropertyAtom>
                       </rdf:first>
                       <rdf:rest>
                         <rdf:Description>
                           <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                              <swrl:propertyPredicate rdf:resource="#performMotion"/>
-                              <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                              <swrl:argument2 rdf:resource="urn:swrl#motion"/>
-                            </swrl:IndividualPropertyAtom>
+                            <swrl:ClassAtom>
+                              <swrl:classPredicate rdf:resource="#Motion"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                            </swrl:ClassAtom>
                           </rdf:first>
-                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:IndividualPropertyAtom>
+                                  <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                                </swrl:IndividualPropertyAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
                         </rdf:Description>
                       </rdf:rest>
                     </rdf:Description>
@@ -1348,6 +1406,142 @@
   </swrl:head>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#BeatingLiquid">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#BeatingTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#LiquidIngredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#Motion"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhirlstormMotion"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BeatingPowder">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#BeatingTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#Motion"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhirlstormThenVertical"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#BeatingWet">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
@@ -1363,7 +1557,7 @@
           <rdf:first>
             <swrl:ClassAtom>
               <swrl:classPredicate rdf:resource="#WetIngredient"/>
-              <swrl:argument1 rdf:resource="urn:swrl#ing"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
           <rdf:rest>
@@ -1496,7 +1690,7 @@
     <rdf:Description>
       <rdf:first>
         <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#WhirlstormMotion"/>
+          <swrl:classPredicate rdf:resource="#VerticalCircularMotion"/>
           <swrl:argument1 rdf:resource="urn:swrl#motion"/>
         </swrl:ClassAtom>
       </rdf:first>
@@ -1505,7 +1699,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#BeatingLiquidPowderWet">
+<owl:NamedIndividual rdf:about="#BeatingLiquidPowder">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1553,41 +1747,20 @@
                         <rdf:Description>
                           <rdf:first>
                             <swrl:ClassAtom>
-                              <swrl:classPredicate rdf:resource="#WetIngredient"/>
-                              <swrl:argument1 rdf:resource="urn:swrl#ing3"/>
+                              <swrl:classPredicate rdf:resource="#Motion"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#motion"/>
                             </swrl:ClassAtom>
                           </rdf:first>
                           <rdf:rest>
                             <rdf:Description>
                               <rdf:first>
                                 <swrl:IndividualPropertyAtom>
-                                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                                  <swrl:propertyPredicate rdf:resource="#performMotion"/>
                                   <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl#motion"/>
                                 </swrl:IndividualPropertyAtom>
                               </rdf:first>
-                              <rdf:rest>
-                                <rdf:Description>
-                                  <rdf:first>
-                                    <swrl:ClassAtom>
-                                      <swrl:classPredicate rdf:resource="#Motion"/>
-                                      <swrl:argument1 rdf:resource="urn:swrl#motion"/>
-                                    </swrl:ClassAtom>
-                                  </rdf:first>
-                                  <rdf:rest>
-                                    <rdf:Description>
-                                      <rdf:first>
-                                        <swrl:IndividualPropertyAtom>
-                                          <swrl:propertyPredicate rdf:resource="#performMotion"/>
-                                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                          <swrl:argument2 rdf:resource="urn:swrl#motion"/>
-                                        </swrl:IndividualPropertyAtom>
-                                      </rdf:first>
-                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                  </rdf:rest>
-                                </rdf:Description>
-                              </rdf:rest>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                             </rdf:Description>
                           </rdf:rest>
                         </rdf:Description>
@@ -1615,6 +1788,95 @@
   </swrl:head>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#BeatingLiquidWet">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#BeatingTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#LiquidIngredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#ing2"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:ClassAtom>
+                              <swrl:classPredicate rdf:resource="#Motion"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                            </swrl:ClassAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:IndividualPropertyAtom>
+                                  <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                                </swrl:IndividualPropertyAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhirlstormThenVertical"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#WhiskWet">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
@@ -1630,7 +1892,7 @@
           <rdf:first>
             <swrl:ClassAtom>
               <swrl:classPredicate rdf:resource="#WetIngredient"/>
-              <swrl:argument1 rdf:resource="urn:swrl#ing"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
           <rdf:rest>
@@ -1787,7 +2049,7 @@
           <rdf:first>
             <swrl:ClassAtom>
               <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
-              <swrl:argument1 rdf:resource="urn:swrl#ing"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
           <rdf:rest>
@@ -1840,6 +2102,320 @@
   </swrl:head>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#WhiskLiquid">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhiskingTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#LiquidIngredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#Motion"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhirlstormMotion"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#WhiskDryLiquid">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhiskingTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#LiquidIngredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#ing2"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:ClassAtom>
+                              <swrl:classPredicate rdf:resource="#Motion"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                            </swrl:ClassAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:IndividualPropertyAtom>
+                                  <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                                </swrl:IndividualPropertyAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhirlstormMotion"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#WhiskLiquidWet">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhiskingTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#LiquidIngredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#ing2"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:ClassAtom>
+                              <swrl:classPredicate rdf:resource="#Motion"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                            </swrl:ClassAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:IndividualPropertyAtom>
+                                  <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                                </swrl:IndividualPropertyAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#WhirlstormMotion"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Folding">
+  <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#FoldingTask"/>
+          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Ingredient"/>
+              <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasIngredient"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#ing1"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#Motion"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#performMotion"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#motion"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#FoldingMotion"/>
+          <swrl:argument1 rdf:resource="urn:swrl#motion"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</owl:NamedIndividual>
+
 <swrl:Variable rdf:about="urn:swrl#x"/>
 
 <swrl:Variable rdf:about="urn:swrl#ing1"/>
@@ -1847,10 +2423,6 @@
 <swrl:Variable rdf:about="urn:swrl#ing2"/>
 
 <swrl:Variable rdf:about="urn:swrl#motion"/>
-
-<swrl:Variable rdf:about="urn:swrl#ing"/>
-
-<swrl:Variable rdf:about="urn:swrl#ing3"/>
 
 
 </rdf:RDF>
