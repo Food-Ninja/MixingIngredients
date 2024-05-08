@@ -1,6 +1,7 @@
 from owlready2 import *
 
 onto = get_ontology("http://www.ease-crc.org/ont/mixing")
+obo = get_ontology("http://purl.obolibrary.org/obo/")
 
 with onto:
     class Ingredient(Thing):
@@ -11,28 +12,52 @@ with onto:
         pass
 
 
-    class Flour(DryPowderIngredient):
+    class FOODON_03316449(DryPowderIngredient):
+        namespace = obo
+        label = [locstr("baking supply")]
+
+
+    class FOODON_00004510(DryPowderIngredient):
+        namespace = obo
         label = [locstr("flour", "en")]
 
 
-    class Salt(DryPowderIngredient):
+    class FOODON_00002221(DryPowderIngredient):
+        namespace = obo
         label = [locstr("salt", "en")]
 
 
-    class Sugar(DryPowderIngredient):
-        label = [locstr("sugar", "en")]
+    class FOODON_03301073(DryPowderIngredient):
+        namespace = obo
+        label = [locstr("sugar (granulated)", "en")]
 
 
     class LiquidIngredient(Ingredient):
         pass
 
 
-    class Milk(LiquidIngredient):
-        label = [locstr("milk", "en")]
+    class FOODON_03302116(LiquidIngredient):
+        label = [locstr("cows milk", "en")]
 
 
-    class Water(LiquidIngredient):
+    class FOODON_00002340(LiquidIngredient):
+        namespace = obo
         label = [locstr("water", "en")]
+
+
+    class FOODON_03310387(LiquidIngredient):
+        namespace = obo
+        label = [locstr("oil", "en")]
+
+
+    class FOODON_00001073(LiquidIngredient):
+        namespace = obo
+        label = [locstr("vinegar", "en")]
+
+
+    class FOODON_03311146(LiquidIngredient):
+        namespace = obo
+        label = [locstr("sauce", "en")]
 
 
     class SolidIngredient(Ingredient):
@@ -43,17 +68,25 @@ with onto:
         pass
 
 
-    class Butter(WetIngredient):
+    class FOODON_03302515(WetIngredient):
+        namespace = obo
+        label = [locstr("sour cream", "en")]
+
+
+    class FOODON_00001014(WetIngredient):
+        namespace = obo
+        label = [locstr("yogurt", "en")]
+
+
+    class FOODON_00001178(WetIngredient):
+        namespace = obo
+        label = [locstr("honey", "en")]
+
+
+    class FOODON_00001772(WetIngredient):
+        namespace = obo
         label = [locstr("butter", "en")]
 
 
-    class Egg(WetIngredient):
+    class FOODON_03315102(WetIngredient):
         label = [locstr("egg", "en")]
-
-
-    class EggWhite(Egg):
-        label = [locstr("egg white", "en")]
-
-
-    class EggYolk(Egg):
-        label = [locstr("egg yolk", "en")]

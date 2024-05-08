@@ -156,33 +156,53 @@
   <rdfs:subClassOf rdf:resource="#Ingredient"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Flour">
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03316449">
+  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">baking supply</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004510">
   <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
   <rdfs:label xml:lang="en">flour</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#Salt">
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002221">
   <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
   <rdfs:label xml:lang="en">salt</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#Sugar">
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301073">
   <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label xml:lang="en">sugar</rdfs:label>
+  <rdfs:label xml:lang="en">sugar (granulated)</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#LiquidIngredient">
   <rdfs:subClassOf rdf:resource="#Ingredient"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Milk">
+<owl:Class rdf:about="#FOODON_03302116">
   <rdfs:subClassOf rdf:resource="#LiquidIngredient"/>
-  <rdfs:label xml:lang="en">milk</rdfs:label>
+  <rdfs:label xml:lang="en">cows milk</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#Water">
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002340">
   <rdfs:subClassOf rdf:resource="#LiquidIngredient"/>
   <rdfs:label xml:lang="en">water</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310387">
+  <rdfs:subClassOf rdf:resource="#LiquidIngredient"/>
+  <rdfs:label xml:lang="en">oil</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001073">
+  <rdfs:subClassOf rdf:resource="#LiquidIngredient"/>
+  <rdfs:label xml:lang="en">vinegar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03311146">
+  <rdfs:subClassOf rdf:resource="#LiquidIngredient"/>
+  <rdfs:label xml:lang="en">sauce</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#SolidIngredient">
@@ -193,24 +213,29 @@
   <rdfs:subClassOf rdf:resource="#Ingredient"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Butter">
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03302515">
+  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:label xml:lang="en">sour cream</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001014">
+  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:label xml:lang="en">yogurt</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001178">
+  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:label xml:lang="en">honey</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001772">
   <rdfs:subClassOf rdf:resource="#WetIngredient"/>
   <rdfs:label xml:lang="en">butter</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#Egg">
+<owl:Class rdf:about="#FOODON_03315102">
   <rdfs:subClassOf rdf:resource="#WetIngredient"/>
   <rdfs:label xml:lang="en">egg</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#EggWhite">
-  <rdfs:subClassOf rdf:resource="#Egg"/>
-  <rdfs:label xml:lang="en">egg white</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#EggYolk">
-  <rdfs:subClassOf rdf:resource="#Egg"/>
-  <rdfs:label xml:lang="en">egg yolk</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#Motion">
