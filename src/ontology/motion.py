@@ -19,11 +19,11 @@ with onto:
         pass
 
 
-    class angle_shift1(motion_parameters):
+    class folding_rotation_shift(motion_parameters):
         pass
 
 
-    class angle_shift2(motion_parameters):
+    class repetitive_folding_rotation_shift(motion_parameters):
         pass
 
 
@@ -47,7 +47,7 @@ with onto:
         pass
 
 
-    class vertical_increment(motion_parameters):
+    class horizontal_increment(motion_parameters):
         pass
 
 
@@ -69,13 +69,13 @@ with onto:
     class FoldingMotion(MixingMotion):
         label = [locstr("folding motion", "en")]
         is_a = [radius_lower_bound_relative.value(0.0) & radius_upper_bound_relative.value(0.7),
-                angle_shift1.value(90), angle_shift2.value(22.5)]
+                folding_rotation_shift.value(90), repetitive_folding_rotation_shift.value(22.5)]
 
 
-    class VerticalCircularMotion(MixingMotion):
+    class HorizontalEllipticalMotion(MixingMotion):
         label = [locstr("vertical circular motion", "en")]
         is_a = [radius_lower_bound_relative.value(0.0) & radius_upper_bound_relative.value(0.7),
-                vertical_increment.value(0.1)]
+                horizontal_increment.value(0.1)]
 
 
     class WhirlstormMotion(MixingMotion):
@@ -93,7 +93,7 @@ with onto:
                                                   & followedBy.exactly(1, Motion)))]
 
 
-    class WhirlstormThenVertical(CompoundMotion):
+    class WhirlstormThenHorizontal(CompoundMotion):
         label = [locstr("whirlstorm then vertical")]
-        equivalent_to = [Motion & (hasMotion.some(WhirlstormMotion & followedBy.some(VerticalCircularMotion) &
+        equivalent_to = [Motion & (hasMotion.some(WhirlstormMotion & followedBy.some(HorizontalEllipticalMotion) &
                                                   followedBy.exactly(1, Motion)))]
