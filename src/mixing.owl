@@ -152,8 +152,45 @@
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
-<owl:Class rdf:about="#LiquidIngredient">
+<owl:Class rdf:about="#DryIngredient">
   <rdfs:subClassOf rdf:resource="#Ingredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SolidIngredient">
+  <rdfs:subClassOf rdf:resource="#DryIngredient"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">of uniformly close and coherent texture : not loose or spongy : compact</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#PowderIngredient">
+  <rdfs:subClassOf rdf:resource="#DryIngredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03316449">
+  <rdfs:subClassOf rdf:resource="#PowderIngredient"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">baking supply</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004510">
+  <rdfs:subClassOf rdf:resource="#PowderIngredient"/>
+  <rdfs:label xml:lang="en">flour</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002221">
+  <rdfs:subClassOf rdf:resource="#PowderIngredient"/>
+  <rdfs:label xml:lang="en">salt</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301073">
+  <rdfs:subClassOf rdf:resource="#PowderIngredient"/>
+  <rdfs:label xml:lang="en">sugar (granulated)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#WetIngredient">
+  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LiquidIngredient">
+  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
 </owl:Class>
 
 <owl:Class rdf:about="#FOODON_03302116">
@@ -181,60 +218,32 @@
   <rdfs:label xml:lang="en">sauce</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#SolidIngredient">
-  <rdfs:subClassOf rdf:resource="#Ingredient"/>
-</owl:Class>
-
-<owl:Class rdf:about="#DryPowderIngredient">
-  <rdfs:subClassOf rdf:resource="#SolidIngredient"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03316449">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">baking supply</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004510">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label xml:lang="en">flour</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002221">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label xml:lang="en">salt</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301073">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label xml:lang="en">sugar (granulated)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#WetIngredient">
-  <rdfs:subClassOf rdf:resource="#Ingredient"/>
+<owl:Class rdf:about="#SemiLiquid">
+  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03302515">
-  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
   <rdfs:label xml:lang="en">sour cream</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001014">
-  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
   <rdfs:label xml:lang="en">yogurt</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001178">
-  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
   <rdfs:label xml:lang="en">honey</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001772">
-  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
   <rdfs:label xml:lang="en">butter</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#FOODON_03315102">
-  <rdfs:subClassOf rdf:resource="#WetIngredient"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
   <rdfs:label xml:lang="en">egg</rdfs:label>
 </owl:Class>
 
@@ -478,7 +487,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -567,7 +576,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -724,7 +733,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -949,7 +958,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -1017,7 +1026,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -1259,7 +1268,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+                      <swrl:classPredicate rdf:resource="#PowderIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -1488,7 +1497,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -1624,7 +1633,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -1730,7 +1739,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+                      <swrl:classPredicate rdf:resource="#PowderIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -1959,7 +1968,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -2048,7 +2057,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+              <swrl:classPredicate rdf:resource="#PowderIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -2201,7 +2210,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#DryPowderIngredient"/>
+                      <swrl:classPredicate rdf:resource="#PowderIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
