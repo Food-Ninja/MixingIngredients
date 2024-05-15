@@ -73,7 +73,7 @@ with onto:
 
 
     class HorizontalEllipticalMotion(MixingMotion):
-        label = [locstr("vertical circular motion", "en")]
+        label = [locstr("horizontal elliptical motion", "en")]
         is_a = [radius_lower_bound_relative.value(0.0) & radius_upper_bound_relative.value(0.7),
                 horizontal_increment.value(0.1)]
 
@@ -94,6 +94,6 @@ with onto:
 
 
     class WhirlstormThenHorizontal(CompoundMotion):
-        label = [locstr("whirlstorm then vertical")]
+        label = [locstr("whirlstorm then horizontal")]
         equivalent_to = [Motion & (hasMotion.some(WhirlstormMotion & followedBy.some(HorizontalEllipticalMotion) &
                                                   followedBy.exactly(1, Motion)))]
