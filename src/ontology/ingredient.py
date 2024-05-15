@@ -8,30 +8,6 @@ with onto:
         pass
 
 
-    class DryPowderIngredient(Ingredient):
-        pass
-
-
-    class FOODON_03316449(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("baking supply")]
-
-
-    class FOODON_00004510(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("flour", "en")]
-
-
-    class FOODON_00002221(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("salt", "en")]
-
-
-    class FOODON_03301073(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("sugar (granulated)", "en")]
-
-
     class LiquidIngredient(Ingredient):
         pass
 
@@ -62,6 +38,30 @@ with onto:
 
     class SolidIngredient(Ingredient):
         pass
+
+
+    class DryPowderIngredient(SolidIngredient):
+        pass
+
+
+    class FOODON_03316449(DryPowderIngredient):
+        namespace = obo
+        label = [locstr("baking supply")]
+
+
+    class FOODON_00004510(DryPowderIngredient):
+        namespace = obo
+        label = [locstr("flour", "en")]
+
+
+    class FOODON_00002221(DryPowderIngredient):
+        namespace = obo
+        label = [locstr("salt", "en")]
+
+
+    class FOODON_03301073(DryPowderIngredient):
+        namespace = obo
+        label = [locstr("sugar (granulated)", "en")]
 
 
     class WetIngredient(Ingredient):
