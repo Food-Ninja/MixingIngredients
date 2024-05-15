@@ -152,30 +152,6 @@
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
-<owl:Class rdf:about="#DryPowderIngredient">
-  <rdfs:subClassOf rdf:resource="#Ingredient"/>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03316449">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">baking supply</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004510">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label xml:lang="en">flour</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002221">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label xml:lang="en">salt</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301073">
-  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
-  <rdfs:label xml:lang="en">sugar (granulated)</rdfs:label>
-</owl:Class>
-
 <owl:Class rdf:about="#LiquidIngredient">
   <rdfs:subClassOf rdf:resource="#Ingredient"/>
 </owl:Class>
@@ -207,6 +183,30 @@
 
 <owl:Class rdf:about="#SolidIngredient">
   <rdfs:subClassOf rdf:resource="#Ingredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DryPowderIngredient">
+  <rdfs:subClassOf rdf:resource="#SolidIngredient"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03316449">
+  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">baking supply</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004510">
+  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
+  <rdfs:label xml:lang="en">flour</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002221">
+  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
+  <rdfs:label xml:lang="en">salt</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301073">
+  <rdfs:subClassOf rdf:resource="#DryPowderIngredient"/>
+  <rdfs:label xml:lang="en">sugar (granulated)</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#WetIngredient">
@@ -345,7 +345,7 @@
       <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:hasValue>
     </owl:Restriction>
   </rdfs:subClassOf>
-  <rdfs:label xml:lang="en">vertical circular motion</rdfs:label>
+  <rdfs:label xml:lang="en">horizontal elliptical motion</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#WhirlstormMotion">
@@ -431,7 +431,7 @@
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">whirlstorm then vertical</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">whirlstorm then horizontal</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task">
