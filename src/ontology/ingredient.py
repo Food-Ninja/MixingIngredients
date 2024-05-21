@@ -8,7 +8,43 @@ with onto:
         pass
 
 
-    class LiquidIngredient(Ingredient):
+    class DryIngredient(Ingredient):
+        pass
+
+
+    class SolidIngredient(DryIngredient):
+        comment = ["of uniformly close and coherent texture : not loose or spongy : compact"]
+
+
+    class PowderIngredient(DryIngredient):
+        pass
+
+
+    class FOODON_03316449(PowderIngredient):
+        namespace = obo
+        label = [locstr("baking supply")]
+
+
+    class FOODON_00004510(PowderIngredient):
+        namespace = obo
+        label = [locstr("flour", "en")]
+
+
+    class FOODON_00002221(PowderIngredient):
+        namespace = obo
+        label = [locstr("salt", "en")]
+
+
+    class FOODON_03301073(PowderIngredient):
+        namespace = obo
+        label = [locstr("sugar (granulated)", "en")]
+
+
+    class WetIngredient(Ingredient):
+        pass
+
+
+    class LiquidIngredient(WetIngredient):
         pass
 
 
@@ -36,57 +72,29 @@ with onto:
         label = [locstr("sauce", "en")]
 
 
-    class SolidIngredient(Ingredient):
+    class SemiLiquid(WetIngredient):
         pass
 
 
-    class DryPowderIngredient(SolidIngredient):
-        pass
-
-
-    class FOODON_03316449(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("baking supply")]
-
-
-    class FOODON_00004510(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("flour", "en")]
-
-
-    class FOODON_00002221(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("salt", "en")]
-
-
-    class FOODON_03301073(DryPowderIngredient):
-        namespace = obo
-        label = [locstr("sugar (granulated)", "en")]
-
-
-    class WetIngredient(Ingredient):
-        pass
-
-
-    class FOODON_03302515(WetIngredient):
+    class FOODON_03302515(SemiLiquid):
         namespace = obo
         label = [locstr("sour cream", "en")]
 
 
-    class FOODON_00001014(WetIngredient):
+    class FOODON_00001014(SemiLiquid):
         namespace = obo
         label = [locstr("yogurt", "en")]
 
 
-    class FOODON_00001178(WetIngredient):
+    class FOODON_00001178(SemiLiquid):
         namespace = obo
         label = [locstr("honey", "en")]
 
 
-    class FOODON_00001772(WetIngredient):
+    class FOODON_00001772(SemiLiquid):
         namespace = obo
         label = [locstr("butter", "en")]
 
 
-    class FOODON_03315102(WetIngredient):
+    class FOODON_03315102(SemiLiquid):
         label = [locstr("egg", "en")]
