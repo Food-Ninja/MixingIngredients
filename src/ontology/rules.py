@@ -35,12 +35,12 @@ with onto:
     MIXING RULES
     """
     r1 = create_rule(name="MixingPowderLiquid",
-                     rule="MixingTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1) "
+                     rule="MixingTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1) "
                           "^ LiquidIngredient(?ing2) ^ hasIngredient(?x, ?ing2) ^ Motion(?motion)"
                           "^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
 
     r2 = create_rule(name="MixingPowderWet",
-                     rule="MixingTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
+                     rule="MixingTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                           "^ WetIngredient(?ing2) ^ hasIngredient(?x, ?ing2) ^ Motion(?motion)"
                           "^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
 
@@ -49,7 +49,7 @@ with onto:
                           "^ Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormThenHorizontal(?motion)")
 
     r4 = create_rule(name="MixingPowder",
-                     rule="MixingTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
+                     rule="MixingTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                           "^ Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
 
     r5 = create_rule(name="MixingLiquid",
@@ -65,10 +65,10 @@ with onto:
     STIRRING RULES
     """
     r18 = create_rule(name="StirPowder",
-                      rule="StirringTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1) "
+                      rule="StirringTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1) "
                            "^ Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
     r7 = create_rule(name="StirPowderWet",
-                     rule="StirringTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1) "
+                     rule="StirringTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1) "
                           "^ WetIngredient(?ing2) ^ hasIngredient(?x, ?ing2)"
                           "^ Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormThenHorizontal(?motion)")
 
@@ -83,7 +83,7 @@ with onto:
 
     r10 = create_rule(name="StirLiquidPowder",
                       rule="StirringTask(?x) ^LiquidIngredient(?ing1)  ^hasIngredient(?x, ?ing1)"
-                           "^ DryPowderIngredient(?ing2) ^ hasIngredient(?x, ?ing1)"
+                           "^ PowderIngredient(?ing2) ^ hasIngredient(?x, ?ing1)"
                            "^ Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
 
     r11 = create_rule(name="StirLiquidWet",
@@ -98,20 +98,20 @@ with onto:
                       rule="BeatingTask(?x) ^ LiquidIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                            "^Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
     r20 = create_rule(name="BeatingPowder",
-                      rule="BeatingTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
+                      rule="BeatingTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                            "^Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormThenHorizontal(?motion)")
     r12 = create_rule(name="BeatingWet",
                       rule="BeatingTask(?x) ^ WetIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                            "^Motion(?motion) ^ performMotion(?x, ?motion) -> HorizontalEllipticalMotion(?motion)")
 
     r13 = create_rule(name="BeatingPowderWet",
-                      rule="BeatingTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
+                      rule="BeatingTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                            "^ WetIngredient(?ing2) ^ hasIngredient(?x, ?ing2)"
                            " ^Motion(?motion) ^ performMotion(?x, ?motion) -> HorizontalEllipticalMotion(?motion)")
 
     r14 = create_rule(name="BeatingLiquidPowder",
                       rule="BeatingTask(?x) ^ LiquidIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
-                           "^ DryPowderIngredient(?ing2) ^ hasIngredient(?x, ?ing2)"
+                           "^ PowderIngredient(?ing2) ^ hasIngredient(?x, ?ing2)"
                            "^ Motion(?motion) ^ performMotion(?x, ?motion) -> "
                            "WhirlstormMotion(?motion)")
 
@@ -130,12 +130,12 @@ with onto:
                            "^ Motion(?motion) ^ performMotion(?x, ?motion) -> HorizontalEllipticalMotion(?motion)")
 
     r16 = create_rule(name="WhiskPowderWet",
-                      rule="WhiskingTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
+                      rule="WhiskingTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                            "^ WetIngredient(?ing2) ^ hasIngredient(?x, ?ing2) "
                            "^Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
 
     r17 = create_rule(name="WhiskPowder",
-                      rule="WhiskingTask(?x) ^ DryPowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
+                      rule="WhiskingTask(?x) ^ PowderIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
                            "^ Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
     r22 = create_rule(name="WhiskLiquid",
                       rule="WhiskingTask(?x) ^ LiquidIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
@@ -143,7 +143,7 @@ with onto:
 
     r23 = create_rule(name="WhiskDryLiquid",
                       rule="WhiskingTask(?x) ^ LiquidIngredient(?ing1) ^ hasIngredient(?x, ?ing1)"
-                           "^ DryPowderIngredient(?ing2) ^ hasIngredient(?x, ?ing2)"
+                           "^ PowderIngredient(?ing2) ^ hasIngredient(?x, ?ing2)"
                            "^ Motion(?motion) ^ performMotion(?x, ?motion) -> WhirlstormMotion(?motion)")
 
     r24 = create_rule(name="WhiskLiquidWet",
