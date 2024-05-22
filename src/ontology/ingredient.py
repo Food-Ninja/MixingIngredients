@@ -72,29 +72,29 @@ with onto:
         label = [locstr("sauce", "en")]
 
 
-    class SemiLiquid(WetIngredient):
+    class SemiLiquidIngredient(WetIngredient):
         pass
 
 
-    class FOODON_03302515(SemiLiquid):
+    class FOODON_03302515(SemiLiquidIngredient):
         namespace = obo
         label = [locstr("sour cream", "en")]
 
 
-    class FOODON_00001014(SemiLiquid):
+    class FOODON_00001014(SemiLiquidIngredient):
         namespace = obo
         label = [locstr("yogurt", "en")]
 
 
-    class FOODON_00001178(SemiLiquid):
+    class FOODON_00001178(SemiLiquidIngredient):
         namespace = obo
         label = [locstr("honey", "en")]
 
 
-    class FOODON_00001772(SemiLiquid):
+    class FOODON_00001772(SemiLiquidIngredient):
         namespace = obo
         label = [locstr("butter", "en")]
 
 
-    class FOODON_03315102(SemiLiquid):
+    class FOODON_03315102(SemiLiquidIngredient):
         label = [locstr("egg", "en")]

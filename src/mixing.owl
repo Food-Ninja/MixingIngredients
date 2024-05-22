@@ -218,32 +218,32 @@
   <rdfs:label xml:lang="en">sauce</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#SemiLiquid">
+<owl:Class rdf:about="#SemiLiquidIngredient">
   <rdfs:subClassOf rdf:resource="#WetIngredient"/>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03302515">
-  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquidIngredient"/>
   <rdfs:label xml:lang="en">sour cream</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001014">
-  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquidIngredient"/>
   <rdfs:label xml:lang="en">yogurt</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001178">
-  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquidIngredient"/>
   <rdfs:label xml:lang="en">honey</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001772">
-  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquidIngredient"/>
   <rdfs:label xml:lang="en">butter</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#FOODON_03315102">
-  <rdfs:subClassOf rdf:resource="#SemiLiquid"/>
+  <rdfs:subClassOf rdf:resource="#SemiLiquidIngredient"/>
   <rdfs:label xml:lang="en">egg</rdfs:label>
 </owl:Class>
 
@@ -562,7 +562,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#MixingPowderWet">
+<owl:NamedIndividual rdf:about="#MixingPowderSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -593,7 +593,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -651,7 +651,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#MixingWet">
+<owl:NamedIndividual rdf:about="#MixingSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -665,7 +665,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#WetIngredient"/>
+              <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -855,7 +855,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#MixingLiquidWet">
+<owl:NamedIndividual rdf:about="#MixingLiquidSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -886,7 +886,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -1012,7 +1012,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#StirPowderWet">
+<owl:NamedIndividual rdf:about="#StirPowderSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1043,7 +1043,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -1101,7 +1101,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#StirWet">
+<owl:NamedIndividual rdf:about="#StirSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1115,7 +1115,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#WetIngredient"/>
+              <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -1326,7 +1326,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#StirLiquidWet">
+<owl:NamedIndividual rdf:about="#StirLiquidSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1357,7 +1357,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -1551,7 +1551,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#BeatingWet">
+<owl:NamedIndividual rdf:about="#BeatingSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1565,7 +1565,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#WetIngredient"/>
+              <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -1619,7 +1619,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#BeatingPowderWet">
+<owl:NamedIndividual rdf:about="#BeatingPowderSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1650,7 +1650,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -1797,7 +1797,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#BeatingLiquidWet">
+<owl:NamedIndividual rdf:about="#BeatingLiquidSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1828,7 +1828,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -1886,7 +1886,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#WhiskWet">
+<owl:NamedIndividual rdf:about="#WhiskSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1900,7 +1900,7 @@
         <rdf:Description>
           <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#WetIngredient"/>
+              <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
               <swrl:argument1 rdf:resource="urn:swrl#ing1"/>
             </swrl:ClassAtom>
           </rdf:first>
@@ -1954,7 +1954,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#WhiskPowderWet">
+<owl:NamedIndividual rdf:about="#WhiskPowderSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -1985,7 +1985,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
@@ -2268,7 +2268,7 @@
   </swrl:head>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#WhiskLiquidWet">
+<owl:NamedIndividual rdf:about="#WhiskLiquidSemiLiquid">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
   <swrl:body>
     <rdf:Description>
@@ -2299,7 +2299,7 @@
                 <rdf:Description>
                   <rdf:first>
                     <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#WetIngredient"/>
+                      <swrl:classPredicate rdf:resource="#SemiLiquidIngredient"/>
                       <swrl:argument1 rdf:resource="urn:swrl#ing2"/>
                     </swrl:ClassAtom>
                   </rdf:first>
