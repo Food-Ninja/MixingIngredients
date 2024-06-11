@@ -47,7 +47,7 @@ with onto:
         pass
 
 
-    class horizontal_increment(motion_parameters):
+    class ellipse_shift(motion_parameters):
         pass
 
 
@@ -63,7 +63,7 @@ with onto:
 
     class CircularMotion(MixingMotion):
         label = [locstr("circular motion", "en")]
-        is_a = [radius_lower_bound_relative.value(0.8) & radius_upper_bound_relative.value(0.7)]
+        is_a = [radius_lower_bound_relative.value(0.7) & radius_upper_bound_relative.value(0.7)]
 
 
     class FoldingMotion(MixingMotion):
@@ -75,7 +75,7 @@ with onto:
     class HorizontalEllipticalMotion(MixingMotion):
         label = [locstr("horizontal elliptical motion", "en")]
         is_a = [radius_lower_bound_relative.value(0.0) & radius_upper_bound_relative.value(0.7),
-                horizontal_increment.value(0.1)]
+                ellipse_shift.value(0.04)]
 
 
     class WhirlstormMotion(MixingMotion):
