@@ -1,2 +1,2 @@
-# PouringLiquids
-Teaching robots to pour liquids
+# Mixing ingredients
+Teaching robots to mix ingredients
