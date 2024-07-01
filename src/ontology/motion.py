@@ -16,39 +16,40 @@ with onto:
 
 
     class motion_parameters(DataProperty, Motion >> float):
-        pass
+        label = [locstr("motion parameters", "en")]
+
 
 
     class folding_rotation_shift(motion_parameters):
-        pass
+        label = [locstr("folding rotation shift", "en")]
 
 
     class repetitive_folding_rotation_shift(motion_parameters):
-        pass
+        label = [locstr("repetitive folding rotation shift", "en")]
 
 
     class height_increment(motion_parameters):
-        pass
+        label = [locstr("height increment", "en")]
 
 
     class radius_lower_bound_absolute(motion_parameters):
-        pass
+        label = [locstr("radius lower bound absolute", "en")]
 
 
     class radius_upper_bound_absolute(motion_parameters):
-        pass
+        label = [locstr("radius upper bound absolute", "en")]
 
 
     class radius_lower_bound_relative(motion_parameters):
-        pass
+        label = [locstr("radius lower bound relative", "en")]
 
 
     class radius_upper_bound_relative(motion_parameters):
-        pass
+        label = [locstr("radius upper bound relative", "en")]
 
 
     class ellipse_shift(motion_parameters):
-        pass
+        label = [locstr("ellipse shift", "en")]
 
 
     class MixingMotion(Motion):

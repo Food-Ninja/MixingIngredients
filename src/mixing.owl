@@ -36,38 +36,47 @@
 <owl:DatatypeProperty rdf:about="#motion_parameters">
   <rdfs:domain rdf:resource="#Motion"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:label xml:lang="en">motion parameters</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#folding_rotation_shift">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">folding rotation shift</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#repetitive_folding_rotation_shift">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">repetitive folding rotation shift</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#height_increment">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">height increment</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#radius_lower_bound_absolute">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">radius lower bound absolute</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#radius_upper_bound_absolute">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">radius upper bound absolute</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#radius_lower_bound_relative">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">radius lower bound relative</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#radius_upper_bound_relative">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">radius upper bound relative</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#ellipse_shift">
   <rdfs:subPropertyOf rdf:resource="#motion_parameters"/>
+  <rdfs:label xml:lang="en">ellipse shift</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool">
