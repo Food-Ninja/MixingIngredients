@@ -49,6 +49,7 @@ with onto:
 
 
     class FOODON_03302116(LiquidIngredient):
+        namespace = obo
         label = [locstr("cows milk", "en")]
 
 
@@ -97,4 +98,5 @@ with onto:
 
 
     class FOODON_03315102(SemiLiquidIngredient):
+        namespace = obo
         label = [locstr("egg", "en")]
